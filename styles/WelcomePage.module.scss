@@ -1,0 +1,38 @@
+@import "./constant.scss";
+
+.content {
+  background-color: $dark;
+  height: 100vh;
+
+  .body {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+.message {
+  min-width: 50vh;
+  max-width: 75vh;
+
+  &__header {
+    margin: 0 auto;
+    width: max-content;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $myBlue;
+  }
+
+  &__body {
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  &__footer {
+    margin-top: 1rem;
+  }
+}

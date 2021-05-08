@@ -1,0 +1,51 @@
+@import "./constant.scss";
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  background-color: red;
+  margin: 0 8rem;
+}
+
+* {
+  color: $light;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@keyframes blinking {
+  from {
+    color: $myBlue;
+  }
+  to {
+    color: $light;
+  }
+}
+
+@keyframes slideFromTop {
+  from {
+    top: 0;
+  }
+}
+
+.blinking {
+  animation-direction: alternate;
+  animation-name: blinking;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.slideFrom {
+  &-top {
+    animation-name: slideFromTop;
+    animation-duration: 1s;
+  }
+}
