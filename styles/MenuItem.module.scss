@@ -1,0 +1,34 @@
+@import "./constant.scss";
+
+@keyframes grow {
+  from {
+    font-size: smaller;
+  }
+}
+
+@keyframes shrink {
+  from {
+    font-size: larger;
+  }
+}
+
+.menuItem {
+  animation: shrink 0.3s;
+  font-weight: 900;
+  transition: all 0.3s;
+
+  &:hover {
+    font-size: larger;
+    color: $myBlue;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $myBlue;
+  }
+}
+
+.active {
+  animation: grow 0.3s;
+  font-size: larger;
+  color: $myBlue;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $myBlue;
+}
