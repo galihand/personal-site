@@ -1,0 +1,80 @@
+@import "./constant.scss";
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-100%);
+    // border: none;
+  }
+}
+
+@keyframes slideFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(+100%);
+  }
+}
+
+.profileContainer {
+  animation: fadeIn 1s;
+  width: 50%;
+  margin: 3rem auto;
+
+  &_body {
+    display: flex;
+    justify-content: space-between;
+
+    &_left {
+      width: 50%;
+    }
+
+    // &_right {
+    // display: none;
+    // }
+  }
+}
+
+.profile {
+  &_image {
+    margin-left: 0.5rem;
+    animation: slideFromBottom 1s;
+    float: right;
+    border-radius: 5px;
+  }
+
+  &_name {
+    animation: slideFromLeft 1s;
+    border-bottom: 1px solid $myBlue;
+    padding-bottom: 3px;
+  }
+
+  &_header {
+    animation: fadeIn 2s;
+    margin-top: 0.5rem;
+    h4 {
+      font-weight: 300;
+      opacity: 0.5;
+    }
+  }
+
+  &_summary {
+    margin-top: 1.5rem;
+    &_title {
+      animation: slideFromLeft 1s;
+      padding-bottom: 3px;
+      border-bottom: 1px solid $myBlue;
+    }
+    &_body {
+      animation: fadeIn 2s;
+      margin-top: 0.5rem;
+      font-weight: 300;
+      text-align: justify;
+      // line-height: 1;
+    }
+  }
+}

@@ -36,7 +36,7 @@ export default function Home() {
 
               <div className={`${styles.message__footer}`}>
                 <Button style={{ margin: "0 auto" }}>
-                  <Link href="/profile">
+                  <Link href="/introduction">
                     <a>Come On!</a>
                   </Link>
                 </Button>
